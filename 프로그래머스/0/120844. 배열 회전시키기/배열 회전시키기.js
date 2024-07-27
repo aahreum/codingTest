@@ -1,10 +1,8 @@
 const solution = (numbers, direction) => {
     if (direction === 'left') {
-        numbers.push(numbers[0])
-        numbers.shift()
+        numbers.push(numbers.shift())
     } else {
-        numbers.unshift(numbers[numbers.length - 1])  
-        numbers.pop()
+        numbers.unshift(numbers.pop())      
     }
     return numbers;
 }
