@@ -1,4 +1,4 @@
 const solution = (n) => {
-    let answer = [...String(n)].reduce((acc, cur) => Number(acc) + Number(cur), 0);
+    let answer = [...String(n)].reduce((acc, cur) => acc + Number(cur), 0);
     return answer;
 }
