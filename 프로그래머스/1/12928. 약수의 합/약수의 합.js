@@ -1,11 +1,11 @@
 const solution = (n) => {
-    let array = [];
+    let sum = 0;
     
-    for (let i = 0; i <= n; i++) {
+    for (let i = 1; i <= n; i++) {
         if (n % i === 0) {
-            array.push(i)
+            sum += i
         }
     }
     
-    return array.reduce((acc, curr) => acc + curr, 0);
+    return sum;
 }
