@@ -1,9 +1,7 @@
 const solution = (arr, queries) => {
     queries.forEach(([s, e]) => {
-        for (let i = 0; i < arr.length; i++) {
-            if (s <= i && i <= e) {
+        for (let i = s; i <= e; i++) {
                 arr[i] += 1;
-            }
         }
     })
     return arr;
