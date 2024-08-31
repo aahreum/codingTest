@@ -7,5 +7,5 @@ const solution = (n) => {
         }
         num++;
     }
-    return arr[arr.length - 1];
+    return arr[n - 1];
 }
