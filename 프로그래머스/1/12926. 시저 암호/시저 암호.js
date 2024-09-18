@@ -1,13 +1,20 @@
 const solution = (s, n) => {
-    return s.split('').map(char => {
+    const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lower = 'abcdefghijklmnopqrstuvwxyz';
+    
+    return [...s].map(char => {
         if (char === ' ') return char;
-        const isUpperCase = char >= 'A' && char <= 'Z';
-        const isLowerCase = char >= 'a' && char <= 'z';
-        if (isUpperCase) {
-            return String.fromCharCode((char.charCodeAt() - 65 + n) % 26 + 65);
-        } else if (isLowerCase) {
-            return String.fromCharCode((char.charCodeAt() - 97 + n) % 26 + 97);
+
+        if (upper.includes(char)) {
+            let index = (upper.indexOf(char) + n) % 26;
+            return upper[index];
         }
+
+        if (lower.includes(char)) {
+            let index = (lower.indexOf(char) + n) % 26;
+            return lower[index];
+        }
+
         return char;
     }).join('');
 }
