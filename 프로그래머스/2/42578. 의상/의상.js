@@ -9,7 +9,7 @@ const solution = (clothes) => {
     }, {})
     let set = Object.values(obj).reduce((acc, arr) => {
         return acc * (arr.length + 1);
-    }, 1)
+    }, 1);
     
     return set - 1;
 }
